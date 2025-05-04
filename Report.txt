@@ -1,44 +1,52 @@
-Name:
+Name: Alex Hernandez Lopez
 
-Number of elements:
+Number of elements: 10000
 
 Bubble Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 2.42967
+Reversed: 5.68199
+Random: 4.38523
 
 Bubble Sort Early Exit
-Sorted:
-Reversed:
-Random:
+Sorted: 0.00052
+Reversed: 5.77670
+Random: 4.48065
 
 Selection Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 1.85288
+Reversed: 2.02421
+Random: 1.89331
 
 Insertion Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 0.00090
+Reversed: 3.70553
+Random: 1.90656
 
 Merge Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 0.01582
+Reversed: 0.01986
+Random: 0.01969
 
 Questions to answer:
 1) What was the worst case scenario for any sorting technique?
-
+    The worst case scenario was the reversed list for bubble sort early exit.
 
 2) The first 3 sorts have the same runtime of O(n^2). Why were the times different? Why would one be more efficient than the others?
-
+    The times were different because of the way they handled the list. Bubble sort compares two values at a time until the list is sorted.
+    Early exit does the same but does a pass to check the list, in some cases this can be quicker or longer. Then, selection compares the values
+    to find the largest and puts it at the end of the list. One would be more efficient than the others based on how much work needs to be done.
+    If the list is nearly sorted, something like early exit may be better. If the list doesn't need many swaps, then selection sort may be best. 
 
 3) Why was merge sort so much more efficient?
-
+    Merge sort was much more efficient because it avoided unnecessary work. Rather than doing multiple passes, it split up the entire list and
+    then merged it all back together in order. The other methods took longer because they had to do multiple passes or make swaps.
 
 4) The built-in sorting technique for most programming languages is known as TimSort.
 This is a merge sort until the arrays have fewer than 10 elements, then it does an insertion sort. Why would this be useful?
-
+    This method would be useful for taking a large set of data and breaks it into smaller parts, which are quicker to sort using
+    insertion sort. Then, they are put together using merge sort. By breaking the data up into more manageable pieces and sorting
+    them with an appropriate method for their size, the technique is much faster. 
 
 5) What issues can you see with a recursive sorting technique like merge sort?
+    If a data set is small, merge sort may end up doing more work than it needs to. Rather than taking the time to break everything up
+    and then put it back together, a different technique like insertion sort would be quicker because it's just plugging things in.
